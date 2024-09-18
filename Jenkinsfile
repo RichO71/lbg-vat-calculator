@@ -1,4 +1,3 @@
-// This adds a quality gate that aborts the pipeline if the quality threshold isn't met
 pipeline {
   agent any
 
@@ -6,7 +5,7 @@ pipeline {
     stage('Checkout') {
         steps {
           // Get some code from a GitHub repository
-          git branch: 'main', url: 'YOUR VAT CALCULATOR REPO HERE'
+          git branch: 'main', url: 'https://github.com/RichO71/lbg-vat-calculator'
         }
     }
     stage('SonarQube Analysis') {
